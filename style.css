@@ -18,8 +18,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-image: url('https://ohny.org/uploads/2024/09/2022-10-22_-_OHNY_-_Weekend_-_Allison_Eden_Studios-7520-1440x960.jpg'); */
-  background-image: url('images/Edenstudio.jpg');
+  background-image: url('https://ohny.org/uploads/2024/09/2022-10-22_-_OHNY_-_Weekend_-_Allison_Eden_Studios-7520-1440x960.jpg');
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -88,15 +87,15 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Writing dropdown */
-.writing-container {
+/* Clickable Container */
+.clickable-container {
   position: relative;
 }
 
-.writing-dropdown {
+.clickable-window {
   display: none; /* Hidden by default */
   position: absolute;
-  top: -205px; /* Adjusted to start higher above "About Me" */
+  top: 10px; /* Adjusted to start 10px below "Writer, Developer, Product Manager" */
   left: 170%; /* Move further to the right */
   background-color: rgba(0, 0, 0, 0.9);
   padding: 15px;
@@ -105,13 +104,15 @@ body {
   width: 200px; /* Fixed width for the dropdown */
 }
 
-.writing-dropdown a {
+.clickable-window a {
   display: block;
+  color: white;
+  text-decoration: none;
   margin: 10px 0;
   text-align: center;
 }
 
-.writing-dropdown img {
+.clickable-window img {
   width: 100%; /* Make logos fill the width of the dropdown */
   height: auto;
   max-width: 180px; /* Slightly smaller than the "Writing" box */
