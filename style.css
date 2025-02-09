@@ -44,14 +44,14 @@ body {
 }
 
 .name h1 {
-  font-size: 3.6em;
+  font-size: 2.5em; /* Smaller font size for mobile */
   font-weight: bold;
   margin-bottom: 10px;
   letter-spacing: 2px;
 }
 
 .name h2 {
-  font-size: 1.62em;
+  font-size: 1.2em; /* Smaller font size for mobile */
   font-weight: normal;
   letter-spacing: 1px;
 }
@@ -59,7 +59,7 @@ body {
 /* Main container for links and dropdown */
 .main-container {
   display: flex;
-  margin-top: 40px;
+  margin-top: 20px; /* Reduced margin for mobile */
 }
 
 /* Clickable boxes */
@@ -67,17 +67,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 20px; /* Space between links and dropdown */
+  margin-right: 0; /* No margin on mobile */
 }
 
 .links a {
   display: block;
-  padding: 15px 30px;
-  margin: 10px 0;
+  padding: 10px 20px; /* Smaller padding for mobile */
+  margin: 5px 0; /* Smaller margin for mobile */
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.2em; /* Smaller font size for mobile */
   font-weight: bold;
   border-radius: 5px;
   transition: background-color 0.3s;
@@ -96,12 +96,13 @@ body {
   display: none; /* Hidden by default */
   position: absolute;
   top: 10px; /* Adjusted to start 10px below "Writer, Developer, Product Manager" */
-  left: 170%; /* Move further to the right */
+  left: 0; /* Adjusted for mobile */
   background-color: rgba(0, 0, 0, 0.9);
-  padding: 15px;
+  padding: 10px; /* Smaller padding for mobile */
   border-radius: 5px;
   z-index: 1;
-  width: 200px; /* Fixed width for the dropdown */
+  width: 100%; /* Full width on mobile */
+  max-width: 200px; /* Limit width on larger screens */
 }
 
 .clickable-window a {
@@ -136,4 +137,31 @@ body {
 
 .social-icons img:hover {
   transform: scale(1.2);
+}
+
+/* Media Queries for Mobile Optimization */
+@media (max-width: 768px) {
+  .name h1 {
+    font-size: 2em; /* Even smaller font size for very small screens */
+  }
+
+  .name h2 {
+    font-size: 1em; /* Even smaller font size for very small screens */
+  }
+
+  .links a {
+    font-size: 1em; /* Smaller font size for very small screens */
+    padding: 8px 15px; /* Smaller padding for very small screens */
+  }
+
+  .clickable-window {
+    left: 0; /* Align to the left on mobile */
+    width: 100%; /* Full width on mobile */
+    max-width: none; /* Remove max-width on mobile */
+  }
+
+  .social-icons {
+    bottom: 10px; /* Adjust position for mobile */
+    right: 10px; /* Adjust position for mobile */
+  }
 }
