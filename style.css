@@ -7,7 +7,7 @@
   
   /* Full-page background image */
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: white;
     overflow: hidden;
   }
@@ -31,43 +31,54 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: flex-start;
     padding: 20px;
   }
   
-  /* Name and title */
+  /* Name and title (reduced by 10%) */
   .name {
-    text-align: right;
+    text-align: left;
     margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
   }
   
   .name h1 {
-    font-size: 3em;
+    font-size: 3.6em; /* Reduced by 10% */
     font-weight: bold;
     margin-bottom: 10px;
+    letter-spacing: 2px;
   }
   
   .name h2 {
-    font-size: 1.5em;
+    font-size: 1.62em; /* Reduced by 10% */
     font-weight: normal;
+    letter-spacing: 1px;
+  }
+  
+  /* Main container for links and dropdown */
+  .main-container {
+    display: flex;
+    margin-top: 40px;
   }
   
   /* Clickable boxes */
   .links {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
+    margin-right: 20px; /* Space between links and dropdown */
   }
   
   .links a {
     display: block;
-    padding: 10px 20px;
-    margin: 5px 0;
+    padding: 15px 30px;
+    margin: 10px 0;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -75,6 +86,40 @@
   
   .links a:hover {
     background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  /* Writing dropdown */
+  .writing-container {
+    position: relative;
+  }
+  
+  .writing-dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: -205px; /* Adjusted to start higher above "About Me" */
+    left: 170%; /* Move further to the right */
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1;
+    width: 200px; /* Fixed width for the dropdown */
+  }
+  
+  .writing-dropdown a {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .writing-dropdown img {
+    width: 100%; /* Make logos fill the width of the dropdown */
+    height: auto;
+    max-width: 180px; /* Slightly smaller than the "Writing" box */
+  }
+  
+  /* Show dropdown on hover */
+  .writing-container:hover .writing-dropdown {
+    display: block;
   }
   
   /* Social icons */
